@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "eb882188-d347-4e75-8959-f0b996044623",
+		"name": "SoftwareInnovationTests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetSensorValues",
+			"item": [
+				{
+					"name": "Authorized",
+					"item": [
+						{
+							"name": "GetSound",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "28ada42a-745e-4386-a23b-97fae97a64de",
+										"exec": [
+											"pm.test(\"response is ok\", function () {\r",
+											"    pm.response.to.have.status(404);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://dit827aptiv.herokuapp.com/sound",
+									"protocol": "https",
+									"host": [
+										"dit827aptiv",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"sound"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Unauthorized",
+					"item": [
+						{
+							"name": "GetSound Unauthorized",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b58f6ce9-0ca6-4b8f-af60-01276b059b67",
+										"exec": [
+											"pm.test(\"response is ok\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://dit827aptiv.herokuapp.com/sound",
+									"protocol": "https",
+									"host": [
+										"dit827aptiv",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"sound"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "PostValueFolder",
+			"item": [
+				{
+					"name": "Authorized",
+					"item": [
+						{
+							"name": "PostSound",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4b0ca3a-0225-4ecb-b91a-cecded8ede89",
+										"exec": [
+											"pm.test(\"response is ok\", function () {\r",
+											"    pm.response.to.have.status(404);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://dit827aptiv.herokuapp.com/sound",
+									"protocol": "https",
+									"host": [
+										"dit827aptiv",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"sound"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Unauthorized",
+					"item": [
+						{
+							"name": "PostSoundUnauthorized",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b4b0ca3a-0225-4ecb-b91a-cecded8ede89",
+										"exec": [
+											"pm.test(\"response is ok\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://dit827aptiv.herokuapp.com/sound",
+									"protocol": "https",
+									"host": [
+										"dit827aptiv",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"sound"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}
