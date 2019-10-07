@@ -8,8 +8,8 @@ client = pymongo.MongoClient(connection_string)
 db = pymongo.database.Database(client, "aptiv")
 collection = pymongo.collection.Collection(db, "sensorreadings")
 app = Flask(__name__, 
-            static_folder = "../website",
-            template_folder = "../website")
+            static_folder = "../",
+            template_folder = "../")
 app.config["MONGODB_HOST"] = client
 
 ## ROUTES
