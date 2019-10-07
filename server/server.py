@@ -15,7 +15,7 @@ app.config["MONGODB_HOST"] = client
 ## ROUTES
 @app.route("/", methods = ["GET"])
 def index():
-    return render_template("index.html")
+    return render_template("mainPage.html")
 
 @app.route("/api/sensors", methods = ['POST'])
 def post_reading():
