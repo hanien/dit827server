@@ -44,26 +44,23 @@ def get_id(rpi_id):
 def update_reading(rpi_id):
     data = request.json
     temperature = data['temperature']
-    sound = data['sound']
-    light = data['light']
+    #sound = data['sound']
+    #light = data['light']
     humidity = data['humidity']
     pressure = data['pressure']
     altitude = data['altitude']
     gain = data['gain']
     lux = data['lux']
-    luminosity = data['luminosity']
+    #luminosity = data['luminosity']
     ir = data['ir']
     full = data['full']
     found_reading = collection.find_one_and_update(
         {'_id': rpi_id}, {'$set': {'temperature': temperature,
-        'sound': sound,
-        'light': light,
         'humidity': humidity,
         'pressure': pressure,
         'altitude': altitude,
         'gain': gain,
         'lux': lux,
-        'luminosity': luminosity,
         'ir': ir,
         'full': full 
         }})
