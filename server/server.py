@@ -7,32 +7,71 @@ connection_string = "mongodb+srv://hanien:hanien123@cluster0-eidux.mongodb.net/t
 client = pymongo.MongoClient(connection_string)
 db = pymongo.database.Database(client, "aptiv")
 collection = pymongo.collection.Collection(db, "sensorreadings")
-app = Flask(__name__, 
-            static_folder = "../",
-            template_folder = "../")
+app = Flask(__name__,
+            static_folder="../website",
+            template_folder="../website")
+
 app.config["MONGODB_HOST"] = client
 
+
 ## ROUTES
-@app.route("/", methods = ["GET"])
+@app.route("/", methods=["GET"])
 def index():
     return render_template("mainPage.html")
 
-@app.route("/api/sensors", methods = ['POST'])
+@app.route("/api/sensors", methods=['POST'])
 def post_reading():
     data = request.json
-    collection.insert_one({'type': data['type'], 'value': data['value']})
+    collection.insert_one(
+        {'_id':data['_id'], 
+        'temperature': data['temperature'],
+        'sound': data['sound'] ,
+        'light': data['light'],
+        'humidity':data['humidity'] ,
+        'pressure': data['pressure'],
+        'altitude': data['altitude'],
+        'gain':data['gain'],
+        'lux':data['lux'],
+        'luminosity':data['luminosity'], 
+        'ir': data['ir'], 
+        'full': data['full'] })
     return jsonify(data)
 
-@app.route("/api/sensors/<reading_type>", methods = ['GET'])
-def get_reading(reading_type):
-    found_reading = collection.find_one({'type': reading_type})
-    return found_reading['value']
+@app.route("/api/sensors/<rpi_id>", methods=['GET'])
+def get_id(rpi_id):
+    rpi = collection.find_one({'_id' : rpi_id})
+    return rpi
 
-@app.route("/api/sensors/<reading_type>", methods = ['PATCH'])
-def update_reading(reading_type):
+
+@app.route("/api/sensors/<rpi_id>", methods=['PUT'])
+def update_reading(rpi_id):
     data = request.json
-    found_reading = collection.find_one_and_update({'type': reading_type}, {'$set': {'value': data['value']}})
-    return found_reading['value']
+    temperature = data['temperature']
+    sound = data['sound']
+    light = data['light']
+    humidity = data['humidity']
+    pressure = data['pressure']
+    altitude = data['altitude']
+    gain = data['gain']
+    lux = data['lux']
+    luminosity = data['luminosity']
+    ir = data['ir']
+    full = data['full']
+    found_reading = collection.find_one_and_update(
+        {'_id': rpi_id}, {'$set': {'temperature': temperature,
+        'sound': sound,
+        'light': light,
+        'humidity': humidity,
+        'pressure': pressure,
+        'altitude': altitude,
+        'gain': gain,
+        'lux': lux,
+        'luminosity': luminosity,
+        'ir': ir,
+        'full': full 
+        }})
+    return found_reading
+
 
 ## START FLASK
 if __name__ == "__main__":
