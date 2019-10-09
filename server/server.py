@@ -7,17 +7,34 @@ connection_string = "mongodb+srv://hanien:hanien123@cluster0-eidux.mongodb.net/t
 client = pymongo.MongoClient(connection_string)
 db = pymongo.database.Database(client, "aptiv")
 collection = pymongo.collection.Collection(db, "sensorreadings")
-app = Flask(__name__,
-            static_folder="../website",
-            template_folder="../website")
+app = Flask(__name__, 
+            static_folder = "../",
+            template_folder = "../")
 
 app.config["MONGODB_HOST"] = client
 
 
 ## ROUTES
-@app.route("/", methods=["GET"])
+@app.route("/", methods = ["GET"])
 def index():
     return render_template("mainPage.html")
+
+@app.route("/api/sensors", methods=["GET"])
+def get_readings():
+    print("GET")
+    rpis = collection.find({})
+    print(type(rpis))
+    res = {}
+    for rpi in rpis:
+        if rpi["_id"] == "driver":
+            res["driver"] = rpi
+        elif rpi["_id"] == "passenger":
+            res["passenger"] = rpi
+        elif rpi["_id"] == "back":
+            res["back"] = rpi
+        else:
+            res["middle"] = rpi
+    return res
 
 @app.route("/api/sensors", methods=['POST'])
 def post_reading():
