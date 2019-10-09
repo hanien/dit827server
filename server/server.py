@@ -10,13 +10,14 @@ collection = pymongo.collection.Collection(db, "sensorreadings")
 app = Flask(__name__,
             static_folder="../website",
             template_folder="../website")
+
 app.config["MONGODB_HOST"] = client
 
 
 ## ROUTES
 @app.route("/", methods=["GET"])
 def index():
-    return render_template("index.html")
+    return render_template("mainPage.html")
 
 @app.route("/api/sensors", methods=['POST'])
 def post_reading():
