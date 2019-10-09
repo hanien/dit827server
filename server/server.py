@@ -7,15 +7,13 @@ connection_string = "mongodb+srv://hanien:hanien123@cluster0-eidux.mongodb.net/t
 client = pymongo.MongoClient(connection_string)
 db = pymongo.database.Database(client, "aptiv")
 collection = pymongo.collection.Collection(db, "sensorreadings")
-app = Flask(__name__, 
-            static_folder = "../",
-            template_folder = "../")
+app = Flask(__name__)
 app.config["MONGODB_HOST"] = client
 
 ## ROUTES
 @app.route("/", methods = ["GET"])
 def index():
-    return render_template("mainPage.html")
+    return render_template("index.html")
 
 @app.route("/api/sensors", methods = ['POST'])
 def post_reading():
