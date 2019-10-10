@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from flask import request, jsonify
 import pymongo
+import json
 
 ## SETUP DB CONNECTION AND FLASK ##
 connection_string = "mongodb+srv://hanien:hanien123@cluster0-eidux.mongodb.net/test?retryWrites=true&w=majority"
@@ -37,12 +38,12 @@ def post_reading():
 @app.route("/api/sensors/<rpi_id>", methods=['GET'])
 def get_id(rpi_id):
     rpi = collection.find_one({'_id' : rpi_id})
-    return rpi
+    return jsonify(rpi)
 
 
 @app.route("/api/sensors/<rpi_id>", methods=['PUT'])
 def update_reading(rpi_id):
-    data = request.json
+    data = json.loads(request.data)
     temperature = data['temperature']
     #sound = data['sound']
     #light = data['light']
@@ -64,7 +65,7 @@ def update_reading(rpi_id):
         'ir': ir,
         'full': full 
         }})
-    return found_reading
+    return jsonify(found_reading)
 
 
 ## START FLASK
