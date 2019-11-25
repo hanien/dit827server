@@ -1,2 +1,3 @@
 1: Change the website so the picture takes up 2/3 and the text takes up 1/3
 2: Update the color scheme? 
+3: Make a gif for zones. Maybe for the other pictures as well.
