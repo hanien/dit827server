@@ -62,8 +62,8 @@
 
 #DashboardSide {
     background-image: url("Dashboard.jpg");
-    min-height: 90%;
-    height: 90%;
+    min-height: 98%;
+    height: 98%;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
