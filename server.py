@@ -4,12 +4,12 @@ import pymongo
 import json
 
 ## SETUP DB CONNECTION AND FLASK ##
-connection_string = "mongodb+srv://hanien:hanien123@cluster0-eidux.mongodb.net/test?retryWrites=true&w=majority"
+"""connection_string = "mongodb+srv://hanien:hanien123@cluster0-eidux.mongodb.net/test?retryWrites=true&w=majority"
 client = pymongo.MongoClient(connection_string)
 db = pymongo.database.Database(client, "aptiv")
-collection = pymongo.collection.Collection(db, "sensorreadings")
+collection = pymongo.collection.Collection(db, "sensorreadings")"""
 app = Flask(__name__)
-app.config["MONGODB_HOST"] = client
+#app.config["MONGODB_HOST"] = client
 
 
 ## ROUTES
@@ -17,7 +17,7 @@ app.config["MONGODB_HOST"] = client
 def index():
     return render_template("index.html")
 
-@app.route("/api/sensors", methods=['POST'])
+""" @app.route("/api/sensors", methods=['POST'])
 def post_reading():
     data = request.json
     collection.insert_one(
@@ -66,7 +66,7 @@ def update_reading(rpi_id):
         'full': full 
         }})
     return jsonify(found_reading)
-
+ """
 
 ## START FLASK
 if __name__ == "__main__":
