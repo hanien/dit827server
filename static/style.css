@@ -1,126 +1,14 @@
-html{
-    scroll-behavior: smooth;
+#video1, #video2 {
+    opacity: 0.6;
 }
 
-#mainPageOG {
-    background: rgba(31, 35, 59, 0.938);
-    background: #1b2a49;
-    background: #39375b;
-    background: #160f30;
-    background: #1E2B34;
-    background: #14222D;
-
-}
-#mainPage {
-    background: black;
-    
+.item-text {
+    top: 30px !important;
+    color: #ab1f3d !important;
+    width: 40%;
+    text-align: left !important;
 }
 
-.navbar-dark {
-    background-color: black;
-    opacity:0.1;
-    transition: opacity 0.5s
-}
-.navbar-dark:hover {
-    opacity:1;
-}
-.mr-auto {
-    margin: auto;
-}
-
-.nav-item {
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-.section {
-    height: 90vh;
-}
-
-#section1{
-    background-image: url("car.jpg");
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 95vh;
-}
-
-#jumbo {
-    background-color: rgb(105, 15, 15, 0.062);
-    background-color: rgb(34, 0, 0, 0.7);
-    text-align: center;
-    margin: auto;
-    color: white;
-}
-
-.fill {
-    min-height: 100%;
-    height: 100%;
-    min-width: 100%;
-    margin-top: 10vh;
-}
-
-#pictureSide {
-    background-image: url("pic.jpg");
-    min-height: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-#textSide {
-    color: white;
-    text-align: center;
-    margin: auto;
-}
-
-#DashboardSide {
-    background-image: url("Dashboard.jpg");
-    min-height: 100%;
-    height: 100;
-    background-size: 100% 97%;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#ProfileSide {
-    background-image: url("Profiles.png");
-    min-height: 100%;
-    height: 100%;
-    background-size: 100% 97%;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#ZonesSide {
-    background-image: url("Zones.gif");
-    min-height: 100%;
-    height: 100%;
-    background-size: 100% 97%;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#DeviceHandlerSide {
-    background-image: url("DeviceHandler.jpg");
-    min-height: 100%;
-    height: 100%;
-    float: right;
-    background-size: 100% 97%;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.item-title {
+    font-size: 5vh;
 }

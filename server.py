@@ -15,7 +15,7 @@ app = Flask(__name__)
 ## ROUTES
 @app.route("/", methods=["GET"])
 def index():
-    return render_template("index.html")
+    return render_template("i.html")
 
 """ @app.route("/api/sensors", methods=['POST'])
 def post_reading():

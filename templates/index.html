@@ -1,127 +1,186 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
+<!-- template based on MDB -->
 <head>
-  <meta charset="UTF-8">
-  <title>Smart Controls</title>
-  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>At Ease</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="static/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="static/css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="static/css/style.min.css" rel="stylesheet">
+  <style type="text/css">
+    html,
+    body,
+    header,
+    .carousel {
+      height: 100%;
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      .navbar:not(.top-nav-collapse) {
+        background: #1C2331 !important;
+      }
+    }
+
+  </style>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="56" id="mainPage">
+<body>
+  <!--Carousel Wrapper-->
+  <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
 
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+      <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
 
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#section1">Smart Controls</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#section2">The Purpose</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#section3">Profiles</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#section4">Zones</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#section5">Device Handler</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
 
-  <section id="section1" class="section">
-    <div class="jumbotron" id="jumbo">
-      <h4>Smart Controls</h1>
-        <br>
-        <p>Adjust your car's environment so it's the best for you!</p>
-    </div>
-  </section>
+      <!--First slide-->
+      <div class="carousel-item active">
+        <div class="view">
 
-  <section id="section2" class="section">
-    <div class="container fill">
-      <div class="row fill">
-        <div class="col-md-8" id="DashboardSide"></div>
-        <div class="col-md-3" id="textSide">
-            <h4>The Purpose</h1>
-          <p>
-            The Smart Controls system was created in order to improve 
-            the car experience for all people in the car. It does this by 
-            memorizing each persons ideal car condition so that the car can provide those 
-            ideal conditions
-          </p>
+          <!--Video source-->
+          <video class="video-intro" autoplay loop muted>
+            <source src="../static/car-gif.mp4" type="video/mp4">
+          </video>
+
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            <!-- Content -->
+            <div class="text-center white-text mx-5 wow fadeIn">
+              <h1 class="mb-4">
+                <strong>Environment and Parental Control</strong>
+              </h1>
+
+              <p>
+                <strong>Your comfort. Anytime. Anyhow.</strong>
+              </p>
+
+              <p class="mb-4 d-none d-md-block">
+                <strong>Control the environment in your car by automatically adjusting the temperature through the AC and heaters, the sound levels of speakers or muting connected devices and so much more.</strong>
+              </p>
+            </div>
+            <!-- Content -->
+
+          </div>
+          <!-- Mask & flexbox options-->
+
         </div>
       </div>
-    </div>
-  </section>
+      <!--/First slide-->
 
-  <section id="section3" class="section">
-    <div class="container fill">
-      <div class="row fill">
-        <div class="col-md-3" id="textSide">
-            <h4>Profiles</h1>
-          <p>
-            Profiles are the way the system remembers what each person wants in the car.
-            A person can create their own profile and set their preferences in it.
-            The system will then act to get the conditions specificed in the profiles.
-          </p>
-        </div>
-        <div class="col-md-8" id="ProfileSide"></div>
-      </div>
-    </div>
-  </section>
+      <!--Second slide-->
+      <div class="carousel-item">
+        <div class="view">
+          <img class="video-intro" width="100%" height="100%" src="../static/img/Dashboard.jpg" />
 
-  <section id="section4" class="section">
-    <div class="container fill">
-      <div class="row fill">
-        <div class="col-md-8" id="ZonesSide"></div>
-        <div class="col-md-3" id="textSide">
-            <h4>Zones</h1>
-          <p>
-            The inside of the car is divided into 3 zones, 1 for the driver seat, 
-            1 for the passenger seat and 1 for the backseat. Each zone can be assigned
-            its own profile and the system will match the profiles preferences with the 
-            conditions detected in the zone. Each zone has its own sensors which are used
-            to see the state of each zone.
-          </p>
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            <!-- Content -->
+            <div class="text-center white-text mx-5 wow fadeIn">
+              <h1 class="mb-4">
+                <strong>Second image/video</strong>
+              </h1>
+
+              <p class="mb-4 d-none d-md-block">
+                <strong>Some text about second image/video</strong>
+              </p>
+            </div>
+            <!-- Content -->
+
+          </div>
+          <!-- Mask & flexbox options-->
+
         </div>
       </div>
-    </div>
-  </section>
+      <!--/Second slide-->
 
-  <section id="section5" class="section">
-    <div class="container fill">
-      <div class="row fill">
-        <div class="col-md-3" id="textSide">
-            <h4>Device Handler</h1>
-          <p>
-            Using IOT the system can also control devices connected to the car in order to 
-            make the driving experience better. For example it can mute or lower the 
-            volume of phones if the driver wants to make it quieter. 
-          </p>
+      <!--Third slide-->
+      <div class="carousel-item">
+        <div class="view">
+
+          <!--Video source-->
+          <video class="video-intro" autoplay loop muted>
+            <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4">
+          </video>
+
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            <!-- Content -->
+            <div class="text-center white-text mx-5 wow fadeIn">
+              <h1 class="mb-4">
+                <strong>Third image/video</strong>
+              </h1>
+
+              <p class="mb-4 d-none d-md-block">
+                <strong>Some text about third image/video</strong>
+              </p>
+            </div>
+            <!-- Content -->
+
+          </div>
+          <!-- Mask & flexbox options-->
+
         </div>
-        <div class="col-md-8" id="DeviceHandlerSide"></div>
       </div>
-    </div>
-  </section>
+      <!--/Third slide-->
 
+    </div>
+    <!--/.Slides-->
+
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+
+  </div>
+  <!--/.Carousel Wrapper-->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2019 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> MDBootstrap.com </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="static/js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="static/js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+
+  </script>
 </body>
 
 </html>
