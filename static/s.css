@@ -1,0 +1,48 @@
+.content {
+    background-color: #16242F;
+}
+.page-title {
+    font-size: 5vh;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.webpage-tagline {
+    font-size: 2vh;
+    line-height: 1.3;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.media-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 3rem !important;
+    width: 90vw;
+}
+.step-caption, .header-content, .step-caption:hover {
+    color: white;/* #FDBF09;*/
+    display: block;
+    z-index: 10;
+    padding: 3vh 10px;
+    text-align: left !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+.step-media {
+    height: 100vh;
+    top: 50vh;
+}
+#list-item-3 {
+    height: 50vh;
+}
+#steps {
+    position: fixed;
+    bottom: 30vh;
+    z-index: 5;
+}
+h2 {
+    text-decoration: underline;
+}
+img {
+    max-height: 750px;
+}

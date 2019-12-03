@@ -15,9 +15,9 @@ app = Flask(__name__)
 ## ROUTES
 @app.route("/", methods=["GET"])
 def index():
-    return render_template("i.html")
+    return render_template("i4.html")
 
-""" @app.route("/api/sensors", methods=['POST'])
+@app.route("/api/sensors", methods=['POST'])
 def post_reading():
     data = request.json
     collection.insert_one(
@@ -66,7 +66,7 @@ def update_reading(rpi_id):
         'full': full 
         }})
     return jsonify(found_reading)
- """
+
 
 ## START FLASK
 if __name__ == "__main__":

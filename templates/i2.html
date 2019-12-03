@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>At Ease</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="row content">
+    <div class="row">
+        <div id="page-header" class="col-sm-12">
+            <div class="col-sm-6 mx-auto">
+                <div class="header-content d-block">
+                    <h5 class="page-title">At Ease</h5>
+                    <p class="webpage-tagline">Control the environment in your car by automatically adjusting the temperature through the AC and heaters, the sound levels of speakers or muting connected devices and so much more.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="media-content page-view col-sm-12 col-md-12 col-lg-12 mx-auto">
+        <video autoplay muted id="video1" loop class="d-block w-100">
+            <source src="../static/mobizen_20191202_120752.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="media-content page-view col-sm-4 col-md-4 col-lg-4 pt-5">
+        <video autoplay muted id="video2" loop class="d-block w-100">
+            <source src="../static/change-humidity-in-zone.mp4" type="video/mp4">
+        </video>
+    </div> 
+    <div class="col-sm-3 mx-auto pt-5">
+        <div class="text-content d-block">
+            <h5 class="item-title">Environmental zone control</h5>
+            <p class="item-text">No longer suffer the whims of others! Control your own zone to have the environment you desire.</p>
+        </div>
+    </div>
+    <div class="media-content page-view col-sm-4 col-md-4 col-lg-4 pt-5">
+        <video autoplay muted id="video2" loop class="d-block w-100">
+            <source src="../static/change-temp-in-zone.mp4" type="video/mp4">
+        </video>
+    </div> 
+    <div class="row">
+        <div class="media-content page-view col-sm-6 col-md-6 col-lg-6 pt-5">
+            <!--<video autoplay muted id="video2" loop class="d-block w-100">
+                <source src="../static/change-environment-mode-zone.mp4" type="video/mp4">
+            </video>-->
+            <img src="../static/img/preset-modes.PNG" class="d-block w-100"/>
+        </div> 
+        <div class="col-sm-3 mx-auto pt-5">
+            <div class="text-content d-block">
+                <h5 class="item-title">Preconfigured Environment Modes</h5>
+                <p class="item-text">Choose from a number of preexisting environment modes such as reading mode for increased illumination or winter mode for some heat on those cold mornings or...</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 mx-auto pt-5">
+            <div class="text-content d-block">
+                <h5 class="item-title">Create your own modes!</h5>
+                <p class="item-text">Set the perfect environment for you by setting values for desired volume, a comfortable temperature among other things. There are five different values you can set!</p>
+            </div>
+        </div>
+        <div class="media-content page-view col-sm-6 col-md-6 col-lg-6 pt-5">
+                <img src="../static/img/add-new-mode.PNG" class="d-block w-100"/>
+            <!--<video autoplay muted id="video2" loop class="d-block w-100">
+                <source src="../static/add-new-environment-mode.mp4" type="video/mp4">
+            </video>-->
+        </div> 
+    </div>
+</div>
+</body>
+
+</html>
