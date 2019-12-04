@@ -17,6 +17,10 @@ app = Flask(__name__)
 def index():
     return render_template("i4.html")
 
+@app.route("/about", methods=["GET"])
+def about():
+    return render_template("about.html")
+
 @app.route("/api/sensors", methods=['POST'])
 def post_reading():
     data = request.json
