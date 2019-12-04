@@ -1,3 +1,6 @@
+html, body {
+    min-height: 110%;
+}
 .content, .at-ease-nav {
     background-color: #16242F !important;
 }
@@ -12,7 +15,6 @@
     font-style: italic;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
 .media-content {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -28,9 +30,12 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none;
 }
+#step-media {
+    /*height: 100vh;*/
+    margin-top: 15vh;
+}
 .step-media {
     height: 100vh;
-    top: 50vh;
 }
 #list-item-3 {
     height: 60vh;

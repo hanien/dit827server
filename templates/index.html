@@ -1,57 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>At Ease</title>
-    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-</head>
 
-<body>
-<div>
-    <div class="row page-view">
-        <div id="overlay">
-            <div class="page-content" class="col-sm-12 col-md-12 col-lg-12 mx-auto">
-                <video autoplay muted id="video1" loop class="d-block w-100">
-                    <source src="../static/mobizen_20191202_120752.mp4" type="video/mp4">
-                </video>
-                <div class="col-sm-8">
-                    <div class="content d-block">
-                        <h5 class="item-title">At Ease</h5>
-                        <p class="item-text">Control the environment in your car by automatically adjusting the temperature through the AC and heaters, the sound levels of speakers or muting connected devices and so much more.</p>
-                    </div>
-                </div>
+{% extends 'base.html' %}
+{% block content %}
+<div class="row content">
+    <div class="row">
+        <div id="page-header" class="col-sm-12 col-md-12 col-lg-12 mx-auto">
+            <div class="header-content d-block">
+                <h5 class="page-title">At Ease</h5>
             </div>
         </div>
     </div>
-    <div class="row page-view">
-        <div id="change-environment">
-            <div class="page-content" class="col-sm-12 col-md-12 col-lg-12 mx-auto">
-                <video autoplay muted id="video2" loop class="d-block w-100">
-                    <source src="../static/change-temp-in-zone.mp4" type="video/mp4">
-                </video>
-                <div class="col-sm-6">
-                    <div class="content d-block">
-                        <h5 class="item-title">Environmental zone control</h5>
-                        <p class="item-text">No longer suffer the whims of others! Control your own zone to have the environment you desire.</p>
-                    </div>
-                </div>
+    <div class="col-sm-12">
+        <div class="col-sm-11 col-md-11 col-lg-11 pb-5 embed-responsive embed-responsive-16by9 mx-auto" id="commercial-video">
+            <video autoplay muted id="video1" loop class="d-block mx-auto">
+                <source src="../static/mobizen_20191202_120752.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>    
+
+    <div class="col-sm-12 pt-5">
+        <div id="steps" class="list-group col-sm-6 float-left">
+            <div class="text mx-auto pl-4" style="width: 20vw;">
+                <a class="step-caption" href="#list-item-1" id="step-one-caption">
+                    <h2>Step 1</h2>
+                    <p>Choose your zone</p>
+                </a>
+                <a class="step-caption" href="#list-item-2" id="step-two-caption">
+                    <h2>Step 2</h2>
+                    <p>Change your environment. Set temperature, air pressure, volume and more to satisfy your needs.</p>
+                </a>
+                <a class="step-caption" href="#list-item-3" id="step-three-caption">
+                    <h2>Step 3</h2>
+                    <p>Enjoy your ride!</p>
+                </a>
             </div>
-        </div>        
+        </div>
+    
+        <div id="step-media" data-spy="scroll" data-target="#steps" data-offset="0" class="col-sm-6 mx-auto float-right">
+            <div class="step-media" id="list-item-1">
+                <img id="car-zone-image" src="../static/img/car-selected-zone.PNG" class="d-block" />
+            </div>
+            <div class="step-media" id="list-item-2">
+                <img id="dashboard-image" src="../static/img/dashboard-left-side.PNG" class="d-block" />
+            </div>
+            <div class="step-media" id="list-item-3">
+                <img id="smiley-image" src="../static/img/smiley.png" class="d-block" />
+            </div>
+        </div>
     </div>
 </div>
-</body>
-
-</html>
+<script>
+$("#steps a").on('click', function(event) {
+    if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top - ($(window).height()/4)
+        }, 800);
+        $(hash).css("opacity", 1);
+    }
+}); 
+$(document).ready(function() {
+    var windowHeight = $(window).height()
+    var topOfCommercial = $("#video1").offset().top;
+    var topOfPageHeader = $("#page-header").offset().top;
+    var heightCommercial = $("#video1").outerHeight();
+    var heightImage = $("#list-item-1").outerHeight();
+    var topOfFirstImage = $("#car-zone-image").offset().top;
+    var topOfSecondImage = $("#list-item-2").offset().top;
+    var topOfThirdImage = $("#list-item-3").offset().top;
+    $("#steps").hide();
+    $(window).scroll(function() {
+        if($(this).scrollTop() > (topOfCommercial+heightCommercial/2) && $(this).scrollTop() < topOfFirstImage+(heightImage/2)){
+            $("#step-one-caption").css({"opacity": 1, "border-left": "3px solid white"});
+            $("#step-two-caption").css({"opacity": 0.5, "border": "none"});
+            $("#step-three-caption").css({"opacity": 0.5, "border": "none"});
+        }
+        if($(this).scrollTop() > topOfFirstImage+(heightImage/2) && $(this).scrollTop() < topOfSecondImage+(heightImage/2)){
+            $("#step-one-caption").css({"opacity": 0.5, "border": "none"});
+            $("#step-two-caption").css({"opacity": 1, "border-left": "3px solid white"});
+            $("#step-three-caption").css({"opacity": 0.5, "border": "none"});
+        }
+        if($(this).scrollTop() > topOfSecondImage+(heightImage/2)){
+            $("#step-one-caption").css({"opacity": 0.5, "border": "none"});
+            $("#step-two-caption").css({"opacity": 0.5, "border": "none"});
+            $("#step-three-caption").css({"opacity": 1, "border-left": "3px solid white"});
+        }
+        if($(this).scrollTop() > topOfCommercial+heightCommercial*3/4) { 
+            $("#steps").fadeIn(600); 
+        } else {
+            $("#steps").hide();
+        }
+    });
+});
+</script>
+{% endblock %}

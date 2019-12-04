@@ -15,7 +15,7 @@ app = Flask(__name__)
 ## ROUTES
 @app.route("/", methods=["GET"])
 def index():
-    return render_template("i4.html")
+    return render_template("index.html")
 
 @app.route("/about", methods=["GET"])
 def about():
