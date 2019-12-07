@@ -2,19 +2,44 @@
 {% block content %}
 <div class="row content">
     <div class="col-sm-6 mx-auto about-text">
-        <h1>ABOUT</h1>
-        <h3>Who are we?</h3>
-        <p>We are a group of seven students at the Software Engineering and Management program
-            in Gothenburg University. In the fall semester of 2019 we were offered the chance 
-            to collaborate with APTIV on a proof of concept project. 
-        </p>
-        <h3>Why did we make At Ease?</h3>
-        <p>jkdahsfljdsfjld</p>
+        <div class="team-image col-sm-12 pb-5">
+            <img class="img-fluid" src="../static/img/team.png" />
+        </div>
+        <div class="about">
+            <div class="about-section pb-3 my-4">
+                <h2>Who are we?</h2>
+                <p>We are a group of seven students at the Software Engineering and Management program
+                    in Gothenburg University. In the fall semester of 2019 we were offered the chance 
+                    to collaborate with APTIV on a proof of concept project. 
+                </p>
+            </div>
+            <div class="about-section pb-3 my-5">
+                <h2>Why did we make At Ease?</h2>
+                <p>Being comfortable in your car is essential, whether you're taking a short city drive on a hot summer day 
+                    or driving across country on a cold winter night. With At Ease you not only have a full overview of the 
+                    interior environment of your car, but you have the ability to adjust temperature, sound levels, air 
+                    pressure and so much more at a press of your fingertips.
+                </p>
+            </div>
+            <div class="about-section pb-3 my-5">
+                <h2 class="mb-4">Our Teams</h2>
+                <div class="team-section col-sm-6 mx-auto float-left">
+                    <h4>Android Team</h4>
+                    <p>
+                        Our Android team was responsible for everything the customer sees on their dashboard.
+                    </p>
+                </div>
+                <div class="team-section col-sm-6 mx-auto float-right">
+                    <h4>Hardware/Backend Team</h4>
+                    <p>
+                        Our hardware and backend team put together the system which gathers the data and saves
+                        it to the database so that it can be used in the Android application.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-<footer class="content mx-auto">
-    <p>Copyright 2019</p>
-</footer>
 <script>
 </script>
 {% endblock %}

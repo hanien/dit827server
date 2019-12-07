@@ -1,8 +1,10 @@
 html, body {
     min-height: 110%;
+    background-color: #16242F !important;
 }
 .content, .at-ease-nav {
     background-color: #16242F !important;
+    color: white;
 }
 .page-title {
     font-size: 5vh;
@@ -34,21 +36,48 @@ html, body {
     margin-top: 15vh;
 }
 .step-media {
-    height: 100vh;
-    margin-bottom: 15vh;
+    height: 80vh;
+    margin-bottom: 10vh;
 }
 #list-item-3 {
     height: 60vh;
 }
 #steps {
     position: fixed;
-    bottom: 10%;
+    bottom: 20%;
     z-index: 5;
 }
 h2 {
     text-decoration: underline;
 }
-img {
+.step-media > img {
     max-height: 750px;
     height: 90%;
+    object-fit: contain;
+}
+#smiley-image {
+    width: 100%;
+}
+.about-section > h2 {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+.how-it-works-section {
+    background-color: #1D394F;
+    border-radius: 3rem !important;
+}
+.how-it-works-section h3 {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+.how-it-works-text {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+.how-it-works-text > p{
+    width: 80%;
 }
