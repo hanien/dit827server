@@ -25,6 +25,10 @@ def about():
 def how_it_works():
     return render_template("how-it-works.html")
 
+@app.route("/gallery", methods=["GET"])
+def gallery():
+    return render_template("gallery.html")
+
 @app.route("/api/sensors", methods=['POST'])
 def post_reading():
     data = request.json

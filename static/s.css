@@ -81,3 +81,19 @@ h2 {
 .how-it-works-text > p{
     width: 80%;
 }
+.gallery-header > h1 {
+    text-align: center;
+}
+.carousel {
+    width: 600px;
+}
+ul {
+    list-style: none;
+}
+ul > li {
+    display: inline-block;
+    border: 1.5px lightblue;
+}
+.img-thumbnail {
+    background-color: #16242F !important;
+}
