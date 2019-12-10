@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from flask import request, jsonify
 import pymongo
 import json
+import os
 
 ## SETUP DB CONNECTION AND FLASK ##
 connection_string = "mongodb+srv://hanien:hanien123@cluster0-eidux.mongodb.net/test?retryWrites=true&w=majority"
@@ -27,7 +28,10 @@ def how_it_works():
 
 @app.route("/gallery", methods=["GET"])
 def gallery():
-    return render_template("gallery.html")
+    team_images_path = os.path.join('static', 'img', 'team-images')
+    team_images = os.listdir(team_images_path)
+    app.config['UPLOAD_FOLDER'] = team_images
+    return render_template("gallery.html", len = len(team_images), images=team_images)
 
 @app.route("/api/sensors", methods=['POST'])
 def post_reading():
