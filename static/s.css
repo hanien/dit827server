@@ -102,3 +102,6 @@ ul > li {
     height: 60vh;
     width: 60vw;
 }
+#bottom-gallery{
+    margin-left: auto;
+}

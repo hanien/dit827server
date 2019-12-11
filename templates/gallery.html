@@ -24,17 +24,18 @@
                 </a>
             </div>
         </div>
-        <div class="row mt-5">
-            <div class="col-sm-10 mx-auto">
-                <ul>
-                    {% for i in range (0, len) %}
-                        <li data-target="#gallery-carousel" data-slide-to="{{i}}" class="col-sm-2 my-3">
-                            <img src="../static/img/team-images/{{ images[i] }}" class="img-thumbnail" />
-                        </li>
-                    {% endfor %}
-                </ul>
+
+            <div class="row mt-8">
+                <div class="col-sm-10" id="bottom-gallery">
+                    <ul>
+                        {% for i in range (0, len) %}
+                            <li data-target="#gallery-carousel" data-slide-to="{{i}}" class="col-sm-3 my-3">
+                                <img src="../static/img/team-images/{{ images[i] }}" class="img-thumbnail" />
+                            </li>
+                        {% endfor %}
+                    </ul>
             </div>
-        </div>
+         </div>
     </div>
 </div>
 <script>

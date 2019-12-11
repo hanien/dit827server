@@ -81,4 +81,4 @@ def update_reading(rpi_id):
 
 ## START FLASK
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
