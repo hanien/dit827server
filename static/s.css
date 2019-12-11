@@ -1,0 +1,107 @@
+html, body {
+    min-height: 110%;
+    background-color: #16242F !important;
+}
+.content, .at-ease-nav {
+    background-color: #16242F !important;
+    color: white;
+}
+.page-title {
+    font-size: 5vh;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.webpage-tagline {
+    font-size: 2vh;
+    line-height: 1.3;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.media-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 3rem !important;
+    width: 90vw;
+}
+.step-caption, .header-content, .step-caption:hover, .about-text {
+    color: white;/* #FDBF09;*/
+    display: block;
+    z-index: 10;
+    padding: 3vh;
+    text-align: left !important;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+}
+#step-media {
+    margin-top: 15vh;
+}
+.step-media {
+    height: 80vh;
+    margin-bottom: 10vh;
+}
+#list-item-3 {
+    height: 60vh;
+}
+#steps {
+    position: fixed;
+    bottom: 20%;
+    z-index: 5;
+}
+h2 {
+    text-decoration: underline;
+}
+.step-media > img {
+    max-height: 750px;
+    height: 90%;
+    object-fit: contain;
+}
+#smiley-image {
+    width: 100%;
+}
+.about-section > h2 {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+.how-it-works-section {
+    background-color: #1D394F;
+    border-radius: 3rem !important;
+}
+.how-it-works-section h3 {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+.how-it-works-text {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+.how-it-works-text > p{
+    width: 80%;
+}
+.gallery-header > h1 {
+    text-align: center;
+}
+.carousel {
+    max-width: 60vw;
+    width: 60vw;
+}
+ul {
+    list-style: none;
+}
+ul > li {
+    display: inline-block;
+    border: 1.5px lightblue;
+}
+.img-thumbnail {
+    background-color: #16242F !important;
+}
+.carousel-item > img {
+    height: 60vh;
+    width: 60vw;
+}
+#bottom-gallery{
+    margin-left: auto;
+}

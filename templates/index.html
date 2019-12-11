@@ -1,116 +1,110 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Smart Controls</title>
-  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-</head>
-
-<body data-spy="scroll" data-target=".navbar" data-offset="56" id="mainPage">
-
-  // NAVBAR
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#section1">Smart Controls</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#section2">Temperature</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#section3">Volume</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#section4">Light</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#section5">Pressure</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  // SECTIONS
-  <section id="section1" class="section">
-    <div class="jumbotron" id="jumbo">
-      <h4>Smart Controls</h1>
-        <br>
-        <p>Adjust your car's environment so it's the best for you!</p>
-    </div>
-  </section>
-
-  <section id="section2" class="section">
-    <div class="container fill">
-      <div class="row fill">
-        <div class="col" id="pictureSide"></div>
-        <div class="col" id="textSide">
-          <p>
-            Control the temperature inside your car!
-          </p>
+{% extends 'base.html' %}
+{% block content %}
+<div class="row content">
+    <div class="col-sm-12 mt-5">
+        <div class="col-sm-11 col-md-11 col-lg-11 pb-5 embed-responsive embed-responsive-16by9 mx-auto" id="commercial-video">
+            <video autoplay muted id="video1" loop class="d-block mx-auto">
+                <source src="../static/mobizen_20191202_120752.mp4" type="video/mp4">
+            </video>
         </div>
-      </div>
-    </div>
-  </section>
+    </div>    
 
-
-  <section id="section3" class="section">
-    <div class="container fill">
-      <div class="row fill">
-        <div class="col" id="textSide">
-          <p>
-            Control the volume inside your car!
-          </p>
+    <div class="col-sm-12 pt-5">
+        <div id="steps" class="list-group col-sm-6 float-left">
+            <div class="text mx-auto pl-4" style="width: 20vw;">
+                <a class="step-caption" href="#list-item-1" id="step-one-caption">
+                    <h2>Step 1</h2>
+                    <p>Choose your zone</p>
+                </a>
+                <a class="step-caption" href="#list-item-2" id="step-two-caption">
+                    <h2>Step 2</h2>
+                    <p>Change your environment. Set temperature, air pressure, volume and more to satisfy your needs.</p>
+                </a>
+                <a class="step-caption" href="#list-item-3" id="step-three-caption">
+                    <h2>Step 3</h2>
+                    <p>Enjoy your ride!</p>
+                </a>
+            </div>
         </div>
-        <div class="col" id="pictureSide"></div>
-      </div>
-    </div>
-  </section>
-
-
-  <section id="section4" class="section">
-    <div class="container fill">
-      <div class="row fill">
-        <div class="col" id="pictureSide"></div>
-        <div class="col" id="textSide">
-          <p>
-            Control the light inside your car!
-          </p>
+    
+        <div id="step-media" data-spy="scroll" data-target="#steps" data-offset="0" class="col-sm-6 mx-auto float-right">
+            <div class="step-media" id="list-item-1">
+                <img id="car-zone-image" src="../static/img/car-selected-zone.PNG" class="d-block img-fluid" />
+            </div>
+            <div class="step-media" id="list-item-2">
+                <img id="dashboard-image" src="../static/img/dashboard-left-side.PNG" class="d-block img-fluid" />
+            </div>
+            <div class="step-media" id="list-item-3">
+                <img id="smiley-image" src="../static/img/smiley.png" class="d-block img-fluid" />
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</div>
+<script>
+$(document).ready(function() {
+    var windowHeight = $(window).height()
+    var topOfCommercial = $("#video1").offset().top;
+    var heightCommercial = $("#video1").outerHeight();
+    var heightImage = $("#list-item-1").outerHeight();
+    var topOfFirstImage = $("#car-zone-image").offset().top;
+    var topOfSecondImage = $("#list-item-2").offset().top;
+    var topOfThirdImage = $("#list-item-3").offset().top;
+    $("#steps").hide();
+    $(window).resize(function() {
+        windowHeight = $(window).height()
+        topOfCommercial = $("#video1").offset().top;
+        heightCommercial = $("#video1").outerHeight();
+        heightImage = $("#list-item-1").outerHeight();
+        topOfFirstImage = $("#car-zone-image").offset().top;
+        topOfSecondImage = $("#list-item-2").offset().top;
+        topOfThirdImage = $("#list-item-3").offset().top;
+    });
 
-  <section id="section5" class="section">
-    <div class="container fill">
-      <div class="row fill">
-        <div class="col" id="textSide">
-          <p>
-            Control the pressure inside your car!
-          </p>
-        </div>
-        <div class="col" id="pictureSide"></div>
-      </div>
-    </div>
-  </section>
+    $(window).scroll(function() {
+        console.log($(this).scrollTop());
+        console.log(heightCommercial);
+        if($(this).scrollTop() > (topOfCommercial+heightCommercial*4/5) && $(this).scrollTop() < topOfFirstImage+(heightImage/2)){
+            $("#step-one-caption").css({"opacity": 1, "border-left": "3px solid white"});
+            $("#step-two-caption").css({"opacity": 0.5, "border": "none"});
+            $("#step-three-caption").css({"opacity": 0.5, "border": "none"});
+        }
+        if($(this).scrollTop() > topOfFirstImage+(heightImage/2) && $(this).scrollTop() < topOfSecondImage+(heightImage/2)){
+            $("#step-one-caption").css({"opacity": 0.5, "border": "none"});
+            $("#step-two-caption").css({"opacity": 1, "border-left": "3px solid white"});
+            $("#step-three-caption").css({"opacity": 0.5, "border": "none"});
+        }
+        if($(this).scrollTop() > topOfSecondImage+(heightImage/2)){
+            $("#step-one-caption").css({"opacity": 0.5, "border": "none"});
+            $("#step-two-caption").css({"opacity": 0.5, "border": "none"});
+            $("#step-three-caption").css({"opacity": 1, "border-left": "3px solid white"});
+        }
+        if(windowHeight > 1100){
+            if($(this).scrollTop() > topOfCommercial+heightCommercial/2) { 
+                $("#steps").fadeIn(600); 
+            } else {
+                $("#steps").hide();
+            }
+        } else {
+            if($(this).scrollTop() > topOfCommercial+heightCommercial*4/5) { 
+                $("#steps").css({"bottom": "15%"});
+                $("#steps").fadeIn(600); 
+            } else {
+                $("#steps").hide();
+            }
+        }
+    });
+});
 
-</body>
-
-</html>
+$("#steps a").on('click', function(event) {
+    if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top - ($(window).height()/4)
+        }, 800);
+        $(hash).css("opacity", 1);
+    }
+}); 
+</script>
+{% endblock %}
