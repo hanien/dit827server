@@ -2,6 +2,19 @@ html, body {
     min-height: 110%;
     background-color: #16242F !important;
 }
+
+p{
+    font-family: "Times New Roman";
+    font-size: 20px;
+    /*font-family: Arial;*/
+}
+h1, h2, h4, a{
+    font-family: "Garamond";
+}
+
+h3{
+    font-family: "Palatino Linotype";
+}
 .content, .at-ease-nav {
     background-color: #16242F !important;
     color: white;
