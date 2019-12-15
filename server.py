@@ -20,18 +20,18 @@ def index():
 
 @app.route("/about", methods=["GET"])
 def about():
-    return render_template("about.html")
+    return render_template("about.html",title = 'About')
 
 @app.route("/how-it-works", methods=["GET"])
 def how_it_works():
-    return render_template("how-it-works.html")
+    return render_template("how-it-works.html",title = 'How it Works!')
 
 @app.route("/gallery", methods=["GET"])
 def gallery():
     team_images_path = os.path.join('static', 'img', 'team-images')
     team_images = os.listdir(team_images_path)
     app.config['UPLOAD_FOLDER'] = team_images
-    return render_template("gallery.html", len = len(team_images), images=team_images)
+    return render_template("gallery.html",title = 'Gallery', len = len(team_images), images=team_images)
 
 @app.route("/api/sensors", methods=['POST'])
 def post_reading():
