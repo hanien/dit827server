@@ -1,18 +1,23 @@
-# Server #
-Flask server for Aptiv project currently serving four endpoints.
+# How to start the WebServer
+___
+# 1. Requirements
 
- - [GET] */*
-    Serves the website
- - [POST] */api/sensors/*
-    Posts a new sensor reading type to the server
-        example body: 
-       {
-         "temp":{"value":"20"},
-         "sound":{"value":"20.3"},
-         "light":{"value":"12.6"},
-         "humidity":{"value":"65"}
-      }
- - [GET] */api/sensors/<reading-type>*
-    Gets the current sensor reading value for the sensor type specified in the parameter
- - [PATCH] */api/sensors/<reading-type>*
-    Patches the sensor reading value for the sensor type specified in the parameter
+* [Git](https://git-scm.com/)
+* Code Editor (e.g. [PyCharm](https://www.jetbrains.com/pycharm/), [VSCode](https://code.visualstudio.com/),  [Atom](https://atom.io/), etc.)
+* Flask WebApp/WebServer requires [python3](https://www.python.org/download/releases/3.0/) & [pip3](https://pip.pypa.io/en/stable/) to run.
+# 2. Cloning the Repository
+* With SSH
+    ```bash
+    git clone git@github.com:hanien/dit827server.git
+    ```
+* With HTTPS
+    ```bash
+    git clone https://github.com/hanien/dit827server.git
+    ```
+# 3. Run the ```python``` server:
+Open your Terminal Command Line and type:
+* ``` cd dit827server  ```
+
+* ``` python server.py ```
+
+* Open your browser and go to the link: http://127.0.0.1:5000/ OR http://localhost:5000/
