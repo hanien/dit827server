@@ -31,7 +31,7 @@ ___
 
 * [Git](https://git-scm.com/) 
 * Code Editor (e.g. [PyCharm](https://www.jetbrains.com/pycharm/), [VSCode](https://code.visualstudio.com/),  [Atom](https://atom.io/), etc.)
-* Flask WebApp/WebServer requires [python3](https://www.python.org/download/releases/3.0/) & [pip3](https://pip.pypa.io/en/stable/) to run.
+* [Flask](http://flask.palletsprojects.com/en/1.1.x/) WebApp/WebServer requires [python3](https://www.python.org/download/releases/3.0/) & [pip3](https://pip.pypa.io/en/stable/) to run.
 # 2. Cloning the Repository
 * With SSH
     ```bash
@@ -55,7 +55,7 @@ Open your Terminal Command Line and type:
      ```
 [![Flask](https://user-images.githubusercontent.com/33482142/70390201-35cd7680-19c9-11ea-8a9b-106eee4dd195.png)](http://flask.palletsprojects.com/en/1.1.x/)
 
-# 3. Run the ```python``` server:
+# 4. Run the ```python``` server:
 Open your Terminal Command Line again and type:
 
 *
