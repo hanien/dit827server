@@ -43,14 +43,16 @@ ___
     ```
 # 3. Flask Requirement
 Open your Terminal Command Line and type:
+
 * 
     ```sh
-    cd dit827server
-    ```
+     cd dit827server
+     ```
+    
 *
     ```sh
-    $ pip install Flask
-    ```
+     $ pip install Flask
+     ```
 [![Flask](https://user-images.githubusercontent.com/33482142/70390201-35cd7680-19c9-11ea-8a9b-106eee4dd195.png)](http://flask.palletsprojects.com/en/1.1.x/)
 
 # 3. Run the ```python``` server:
