@@ -1,5 +1,4 @@
 # Server #
-___
 Flask server for Aptiv project currently serving four endpoints.
 
  - ```[GET]/``` Serves the website
@@ -24,9 +23,10 @@ Flask server for Aptiv project currently serving four endpoints.
         ```
  - ```[GET]/api/sensors/<rpi_id>``` Gets the current sensor reading values for the `Raspberry Pi` specified in the parameter
  - ```[PUT]/api/sensors/<rpi_id>``` Updates the sensor reading values for the `Raspberry Pi` specified in the parameter
+___
 
 # How to start the WebServer #
-___
+
 # 1. Requirements
 
 * [Git](https://git-scm.com/) 
@@ -41,10 +41,24 @@ ___
     ```bash
     git clone https://github.com/hanien/dit827server.git
     ```
-# 3. Run the ```python``` server:
+# 3. Flask Requirement
 Open your Terminal Command Line and type:
-* ``` cd dit827server  ```
+* 
+    ```sh
+    cd dit827server
+    ```
+*
+    ```sh
+    $ pip install Flask
+    ```
+[![Flask](https://user-images.githubusercontent.com/33482142/70390201-35cd7680-19c9-11ea-8a9b-106eee4dd195.png)](http://flask.palletsprojects.com/en/1.1.x/)
 
-* ``` python server.py ```
+# 3. Run the ```python``` server:
+Open your Terminal Command Line again and type:
 
+*
+    ```sh
+     python server.py
+     ```
 * Open your browser and go to the link: http://127.0.0.1:5000/ OR http://localhost:5000/
+
