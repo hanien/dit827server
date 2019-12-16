@@ -2,7 +2,7 @@ html, body {
     min-height: 110%;
     background-color: #16242F !important;
 }
-.content, .at-ease-nav {
+.content, .comfort-zone-nav {
     background-color: #16242F !important;
     color: white;
 }
@@ -99,7 +99,6 @@ ul > li {
     background-color: #16242F !important;
 }
 .carousel-item > img {
-    height: 60vh;
     width: 60vw;
 }
 #bottom-gallery{
