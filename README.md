@@ -11,7 +11,6 @@ Flask server for Aptiv project currently serving four endpoints.
                  "temperature":{"value":"20"},
                  "pressure":{"value":"20"},
                  "altitude":{"value":"20"},
-                 "temperature":{"value":"20"},
                  "sound":{"value":"20.3"},
                  "light":{"value":"12.6"},
                  "humidity":{"value":"65"},
