@@ -1,14 +1,23 @@
 
 {% extends 'base.html' %}
 {% block content %}
+    <div class="container">
+        <div class="row content">
+              <div class="embed-responsive embed-responsive-16by9">
+{#              <iframe class="embed-responsive-item" src="" ></iframe>#}
+              <iframe width="1903" height="768" src="https://www.youtube.com/embed/loXHuBh8yXo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 <div class="row content">
+
     <div class="col-sm-12 mt-5">
         <div class="col-sm-11 col-md-11 col-lg-11 pb-5 embed-responsive embed-responsive-16by9 mx-auto" id="commercial-video">
             <video autoplay muted id="video1" loop class="d-block mx-auto">
                 <source src="../static/mobizen_20191202_120752.mp4" type="video/mp4">
             </video>
         </div>
-    </div>    
+    </div>
 
     <div class="col-sm-12 pt-5">
         <div id="steps" class="list-group col-sm-6 float-left">
@@ -90,7 +99,7 @@ $(document).ready(function() {
             $("#step-one-caption").css({"opacity": 0.5, "border": "none"});
             $("#step-two-caption").css({"opacity": 0.5, "border": "none"});
             $("#step-three-caption").css({"opacity": 1, "border-left": "3px solid white"});
-        }
+        } 
     });
 });
 
